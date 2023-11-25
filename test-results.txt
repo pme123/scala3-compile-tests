@@ -1,0 +1,59 @@
+CIRCE 100 files/ 5 fields
+[info] Sourcefile               Lines   Tokens   Tasty  Complexity/Line    Directory
+[info] exports.scala               11      104      11   1.00  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] JsoniterGenerator.scala     27      353      64   2.37  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] CirceGenerator.scala        25      347      64   2.56  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+...
+[info] Generated17.scala           34      258     308   9.06  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated2.scala            34      258     308   9.06  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Tester.scala               109      970     319   2.93  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] -----------------------------------------------------------------
+[info] Total                     3538    27316   30932   8.74  high
+[info] done compiling
+[success] Total time: 33 s, completed 25 Nov 2023, 11:16:12
+
+CIRCE 100 files /20 fields
+[info] Sourcefile               Lines   Tokens   Tasty  Complexity/Line    Directory
+[info] exports.scala               11      104      11   1.00  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] CirceGenerator.scala        25      347      64   2.56  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] JsoniterGenerator.scala     27      353      64   2.37  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] Tester.scala               109      970     527   4.83  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated41.scala           79      558     662   8.38  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+...
+[info] Generated90.scala           79      558     662   8.38  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] -----------------------------------------------------------------
+[info] Total                     7993    57016   66136   8.27  high
+[info] done compiling
+[success] Total time: 46 s, completed 25 Nov 2023, 11:22:17
+
+JSONITER 100 Files / 5 Lines
+[info] Sourcefile               Lines   Tokens   Tasty  Complexity/Line    Directory
+[info] exports.scala               11      104      11   1.00  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] CirceGenerator.scala        25      347      64   2.56  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] JsoniterGenerator.scala     27      353      64   2.37  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] Generated30.scala           33      247     283   8.58  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated57.scala           33      247     283   8.58  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated77.scala           33      247     283   8.58  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated82.scala           33      247     283   8.58  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+...
+[info] Generated5.scala            33      247     283   8.58  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Tester.scala               104     1023     346   3.33  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] -----------------------------------------------------------------
+[info] Total                     3434    26280   28408   8.27  high
+[info] done compiling
+[success] Total time: 10 s, completed 25 Nov 2023, 11:28:11
+[IJ]
+
+JSONITER 100 Files / 20 Lines
+[info] Sourcefile               Lines   Tokens   Tasty  Complexity/Line    Directory
+[info] exports.scala               11      104      11   1.00  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] JsoniterGenerator.scala     27      353      64   2.37  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] CirceGenerator.scala        25      347      64   2.56  moderate    /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests
+[info] Tester.scala               104     1023     554   5.33  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] Generated44.scala           78      547     611   7.83  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+..
+[info] Generated21.scala           78      547     611   7.83  high        /Users/mpa/dev/experiments/scala3-compile-tests/src/main/scala/scala3/compile/tests/generated
+[info] -----------------------------------------------------------------
+[info] Total                     7889    55980   61177   7.75  high
+[info] done compiling
+[success] Total time: 19 s, completed 25 Nov 2023, 11:24:54
