@@ -3,8 +3,6 @@ package scala3.compile.tests
 @main
 def mainCirce(): Unit = {
 
-  val numberOfTestFiles = 50
-  
   Range(1, numberOfTestFiles).foreach(r =>
     writeClasses(s"Generated$r")
   )
@@ -42,15 +40,16 @@ def writeClasses(name: String)=
         |case class $name(name: String = "$name",
         |  a1: ${name}A = ${name}A.${name}1(),
         |  a2: ${name}A = ${name}A.${name}2(),
+        |  e1: ${name}C = ${name}C.EnumVal1,
         |  b: ${name}B = ${name}B(),
-        |  ${Range(0, 20).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |
         |)
         |object ${name}:
         |  given Codec[${name}] = deriveCodec
         |
         |case class ${name}B(name: String = "$name",
-        |  ${Range(0, 20).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |
         |)
         |object ${name}B:
@@ -59,8 +58,10 @@ def writeClasses(name: String)=
         |enum ${name}A derives ConfiguredCodec:
         |  case ${name}1(name: String = "${name}1")
         |  case ${name}2(firstName: String = "${name}2",
-        |  ${Range(0, 10).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |  )
+        |enum ${name}C derives ConfiguredEnumCodec:
+        |  case ${Range(0, numberOfEnum).map(r => s"EnumVal$r").mkString(", ")}
         |
         |""".stripMargin,
     createFolders = true

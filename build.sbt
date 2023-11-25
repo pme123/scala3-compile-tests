@@ -11,10 +11,12 @@ lazy val root = (project in file("."))
     libraryDependencies ++= dependencies,
     scalacOptions ++= Seq(
        "-Vprofile",
+
       ),
     autoImportSetting,
     javaOptions ++= Seq(
       "-Xmx3g",
+      "-Xmax-inlines=100",
       "-Xss2m",
       "-XX:+UseG1GC",
       "-XX:InitialCodeCacheSize=512m",

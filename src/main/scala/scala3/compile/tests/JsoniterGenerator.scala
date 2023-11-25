@@ -1,9 +1,8 @@
 package scala3.compile.tests
 
+
  @main
 def mainJsoniter(): Unit =
-
-  val numberOfTestFiles = 50
 
   Range(1, numberOfTestFiles).foreach(r =>
     writeJsoniter(s"Generated$r")
@@ -37,24 +36,29 @@ def writeJsoniter(name: String) =
         |case class $name(name: String = "$name",
         |  a1: ${name}A = ${name}A.${name}1(),
         |  a2: ${name}A = ${name}A.${name}2(),
+        |  e1: ${name}C = ${name}C.EnumVal1,
         |  b: ${name}B = ${name}B(),
-        |  ${Range(0, 20).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |
         |)
         |object ${name}:
-        |  given JsonValueCodec[${name}] = JsonCodecMaker.make
+        |  given JsonValueCodec[${name}] = JsonCodec
         |
         |case class ${name}B(name: String = "$name",
-        |  ${Range(0, 20).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |
         |)
         |
         |enum ${name}A:
         |  case ${name}1(name: String = "${name}1")
         |  case ${name}2(firstName: String = "${name}2",
-        |  ${Range(0, 10).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
+        |  ${Range(0, numberOfClass).map(r => s"attr$r: Int = $r,").mkString("\n  ")}
         |  )
         |
+        |enum ${name}C:
+        |  case ${Range(0, numberOfEnum).map(r => s"EnumVal$r").mkString(", ")}
+        |object ${name}C:
+        |  given JsonValueCodec[${name}C] = JsonEnumCodec
         |""".stripMargin,
     createFolders = true
   )
